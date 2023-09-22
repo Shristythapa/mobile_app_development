@@ -1,0 +1,16 @@
+Day 2
+
+jit and aot compiler in dart
+null safty
+string interpolation is used in dart 
+?? operator
+[]-> optional
+{}-> named and optional
+named with required keyword
+
+
+Qn 
+
+1. automorphic number find
+2. palindrome number find (both int and string) you can use var
+
