@@ -3,11 +3,14 @@ import 'package:choose/view/container_view.dart';
 import 'package:choose/view/dashboard_view.dart';
 import 'package:choose/view/display_student.dart';
 import 'package:choose/view/expanded_flexible_view.dart';
+import 'package:choose/view/gird_View.dart';
 import 'package:choose/view/image_view.dart';
 import 'package:choose/view/output_view.dart';
 import 'package:choose/view/random_view.dart';
 import 'package:choose/view/rows_columns.dart';
+import 'package:choose/view/splash.dart';
 import 'package:choose/view/students_details.dart';
+import 'package:choose/view/time_date.dart';
 
 class AppRoutes {
   AppRoutes._();
@@ -21,8 +24,10 @@ class AppRoutes {
   static const String expandedRoute = './expanded';
   static const String colRowRoute = './colRow';
   static const String studentDetails = './studentDetails';
-    static const String studentsDisplay = './studentsDisplay';
-
+  static const String studentsDisplay = './studentsDisplay';
+  static const String gridView = './gridView';
+  static const String splashScreen = './splashView';
+  static const String dateTime = './dateTime';
 
   static getApplicationRoute() {
     return {
@@ -35,7 +40,10 @@ class AppRoutes {
       expandedRoute: (context) => const ExpandedFlexible(),
       colRowRoute: (context) => const RowsColumns(),
       studentDetails: (context) => const StudentDetails(),
-      studentsDisplay:(context) => const StudentsDisplay()
+      studentsDisplay: (context) => const StudentsDisplay(),
+      gridView: (context) => const GridViewView(),
+      splashScreen: (context) => const SplashScreen(),
+      dateTime: (context) => const TimeDate(),
     };
   }
 }

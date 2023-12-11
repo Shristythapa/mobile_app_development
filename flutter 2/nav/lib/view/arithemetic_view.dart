@@ -30,7 +30,14 @@ class _ArithemeticViewState extends State<ArithemeticView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          appBar: AppBar(title: Text("Arithmetic")),
+          appBar: AppBar(
+              leading: IconButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                icon: const Icon(Icons.arrow_back),
+              ),
+              title: Text("Arithmetic")),
           body: Form(
               key: globalFormKey,
               child: Column(
@@ -49,7 +56,7 @@ class _ArithemeticViewState extends State<ArithemeticView> {
                     },
                   ),
                   TextFormField(
-                     keyboardType: TextInputType.number,
+                    keyboardType: TextInputType.number,
                     controller: two,
                     decoration:
                         InputDecoration(labelText: "enter second number"),

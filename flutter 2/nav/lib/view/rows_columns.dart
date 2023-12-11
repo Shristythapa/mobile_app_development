@@ -7,7 +7,14 @@ class RowsColumns extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text("Rows and columns")),
+        appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: const Icon(Icons.arrow_back),
+            ),
+          title: Text("Rows and columns")),
         body: Column(
           children: [
             Expanded(

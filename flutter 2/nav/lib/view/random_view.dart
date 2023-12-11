@@ -28,6 +28,12 @@ class _RandomViewState extends State<RandomView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: const Icon(Icons.arrow_back),
+          ),
           title: const Text("Random game"),
         ),
         body: Column(

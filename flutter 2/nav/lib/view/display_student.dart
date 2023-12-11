@@ -1,3 +1,4 @@
+import 'package:choose/app/common/disply_student.dart';
 import 'package:choose/model/student.dart';
 import 'package:flutter/material.dart';
 
@@ -16,29 +17,20 @@ class _StudentsDisplayState extends State<StudentsDisplay> {
 
     return Scaffold(
         appBar: AppBar(
-          leading: const Icon(Icons.arrow_back),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: const Icon(Icons.arrow_back),
+          ),
           title: const Center(
             child: Text("Student Details"),
           ),
         ),
         body: students.isNotEmpty
-            ? ListView.builder(
-                itemCount: students.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                    title:
-                        Text(students[index].fname! + students[index].lname!),
-                    subtitle: Text(students[index].address!),
-                    trailing: Wrap(
-                      children: [
-                        IconButton(
-                            onPressed: () {}, icon: const Icon(Icons.edit)),
-                        IconButton(
-                            onPressed: () {}, icon: const Icon(Icons.delete))
-                      ],
-                    ),
-                  );
-                })
+            ? DisplayStudent(
+                lstStudents: students,
+              )
             : const Center(
                 child: Text("No Data Found"),
               ));

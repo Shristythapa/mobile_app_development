@@ -11,6 +11,12 @@ class OutputView extends StatelessWidget {
     return  SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: const Icon(Icons.arrow_back),
+            ),
           title:Text("Output")
         ),
         body: Text(

@@ -1,0 +1,21 @@
+--> flutter new update
+
+//
+-> third party use for dropdown - prev class
+-> flutter builf in dropdown
+//value -> selecte and send to database = onchanged city = value
+//child -> shown to user
+
+//listview - listseperator
+
+sliver- insted of single child scroll view? 
+
+------
+//grid view//calculator
+//flutter life cycle
+
+
+----
+fonts
+themedata
+splash screen - token handling and validation is done here also

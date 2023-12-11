@@ -8,7 +8,7 @@ class DashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text("Dashboard")),
+        appBar: AppBar(title: const Text("Dashboard")),
         body: Column(
           children: [
             SizedBox(
@@ -59,13 +59,29 @@ class DashboardView extends StatelessWidget {
                   },
                   child: const Text("Route to Rows and col")),
             ),
-             SizedBox(
+            SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, AppRoutes.studentDetails);
                   },
                   child: const Text("Student Details page")),
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRoutes.gridView);
+                  },
+                  child: const Text("Grid")),
+            ),
+             SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRoutes.dateTime);
+                  },
+                  child: const Text("Dte and time")),
             ),
           ],
         ),
